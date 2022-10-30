@@ -1,0 +1,18 @@
+{% extends "website/base.html" %}
+{% block body-bg %}<body>{% endblock %}
+        <center>
+            {% block Header %}
+            <h1>
+                Your favorite games are:-
+            </h1>
+            {% endblock %}
+
+            <h3>
+                {% block li %}
+                {% for fav in fav_games %}
+                    <li class="bg-primary m-2 p-2">{{ fav }}</li>
+                {% endfor %}
+                {% endblock %}
+            </h3>
+        </center>
+</body>
