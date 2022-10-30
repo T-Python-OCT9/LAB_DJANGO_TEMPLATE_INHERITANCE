@@ -3,7 +3,8 @@
 {% block content %}
 <div>
 <h3> {% block title %} Hello There! {%endblock%}<br>
-    Today's date is {{todayDate}}
+    Today's date is 
+    <a href="{% url 'MainPage:Date'%}">{{todayDate}}</a>
     Have a nice day!
 </h3>
 {% endblock %}
