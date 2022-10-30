@@ -4,6 +4,9 @@ from datetime import date
 import random, string
 
 # Create your views here.
+def homeView(request: HttpRequest):
+    return render(request, 'website/home.html')
+
 def todayView(request: HttpRequest):
     context = {'date': date.today}
     return render(request, 'website/date.html', context)
