@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} New Website {% endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+
+<style>
+    h2,h5{
+       padding-left : 10px;
+       text-align: center;
+       font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+</style>
+<body>
+    <nav class="py-2 bg-light border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="{% url 'Website:fav_Games'%}" class="nav-link link-dark px-2">favorite Gamge</a></li>
+            <li class="nav-item"><a href="{% url 'Website:random_Pass'%}" class="nav-link link-dark px-2">random password</a></li>
+            <li class="nav-item"><a href="{% url 'Website:tody_date'%}" class="nav-link link-dark px-2">Current Date</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">About</a></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Login</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
+          </ul>
+        </div>
+      </nav>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+<!---End nav bar -->
+<img src="{% static 'images/welcome.webp' %}" class="w-100" style="height:60vh; object-fit: cover;" />
+
+<div class=" container-fluid mt-2">
+
+    {% block content %}
+
+
+    {% endblock %}
+</div>
+
+
+
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</html>
