@@ -1,0 +1,13 @@
+{% extends 'firstWebsite/base.html' %}
+
+{% block title %}
+    games
+{% endblock %}
+
+{% block body %}
+    <h1 class="m-3">My Favirates Games Are :</h1>
+    {% for game in games%}
+    <h3 class="m-3">-{{game}}</h3>
+    {% endfor %}
+{% endblock %}
+
