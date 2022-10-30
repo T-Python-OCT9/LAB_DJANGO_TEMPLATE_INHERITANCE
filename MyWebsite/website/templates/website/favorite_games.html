@@ -1,0 +1,8 @@
+{% extends 'website/base.html' %}
+{% block title %} Favorite Games{% endblock %}
+{% block content %}
+    <h2 class="mt-5 fs-3">My favorite games are:</h2>
+    {% for game in favorite_games %}
+    <span class="ms-3 fs-5">{{game}}</span><br />
+    {% endfor %}
+{% endblock %}
