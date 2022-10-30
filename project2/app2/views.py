@@ -8,6 +8,12 @@ import random
 
 
 # Create your views here.
+def home(request: HttpRequest):
+    context={"main" :"Welcom to my website"
+    }
+    return render(request, "app2/base.html", context)
+
+
 
 
 def fav_games(request: HttpRequest):

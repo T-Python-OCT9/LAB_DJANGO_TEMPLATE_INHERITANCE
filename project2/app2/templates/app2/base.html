@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -18,19 +19,18 @@
           <div class="collapse navbar-collapse" id="navbarsExample03">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'app2:home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{% url 'app2:randompass' %}">random password </a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'app2:fav_games' %}">fav games</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'app2:today_date' %}">Today's date</a>
+              </li>
+        
             </ul>
             <form role="search">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -38,11 +38,12 @@
           </div>
         </div>
       </nav>
-
-<div  style="text-align: center; padding: 200px; color: red;">
+      <img src="{% static 'images/header.png' %}" class="w-100" style="height:35vh; object-fit: cover;">
+<div  style="text-align: center; padding: 200px; color:#759494; font-size: large;">
 {% block content %}
- this is the base page
+{{ main }}
 {% endblock %}
+
 </div>
 
 
@@ -50,6 +51,7 @@
 </body>
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted">© 2022 ghadah alahrbi, Inc</p>
+    <img src="{% static 'images/logo.png' %}" style="height:90px; width: 90px;"/>
     
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
