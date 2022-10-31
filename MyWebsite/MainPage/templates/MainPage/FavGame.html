@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'MainPage/Base.html' %}
+{% block content %}
+<div>
+
+    <h2>My favorite Games is :</h2>
+<ul>
+    {% for game in favgame %}
+     <li><a href="{% url 'MainPage:FavoiteGames' forloop.counter0 %}">
+        {{ favgame }}</a></li>
+    {% endfor %}<br><br>
+
+</ul>
+</div>
+{% endblock %}
+</html>
