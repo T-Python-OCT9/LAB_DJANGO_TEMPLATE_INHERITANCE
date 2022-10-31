@@ -1,4 +1,5 @@
 {% extends "website/base.html" %}
+{% load static %}
 {% block body-bg %}<body>{% endblock %}
         <center>
             {% block Header %}
@@ -8,7 +9,8 @@
             {% endblock %}
 
             <h3>
-                {% block li %}
+                {% block content %}
+                <img src="{% static '/images/games.png' %}" class="rounded mx-auto d-block" alt="Games pic">
                 {% for fav in fav_games %}
                     <li class="bg-primary m-2 p-2">{{ fav }}</li>
                 {% endfor %}
