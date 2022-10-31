@@ -1,0 +1,10 @@
+{% extends 'templatesweb/base.html' %} 
+{% block title %} BookStore - Games {% endblock%}
+{% block content %}
+<h2>List of The favorite games is: </h2>
+
+{% for item in Games %}
+{{item}}
+{% endfor %}
+
+{% endblock %}
