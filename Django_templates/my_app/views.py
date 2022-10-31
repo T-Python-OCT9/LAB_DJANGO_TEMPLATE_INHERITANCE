@@ -7,6 +7,10 @@ from django.shortcuts import render
 # Create your views here.
 
 # This should display the date of today .
+def home(request: HttpRequest):
+      
+      return render(request,"my_app/home.html")
+
 
 
 def today_date(request: HttpRequest):

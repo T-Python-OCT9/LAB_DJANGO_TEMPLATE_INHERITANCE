@@ -6,7 +6,7 @@ app_name = "my_app"
 
 
 urlpatterns = [
-    #path('home/', views.home, name="home"),
+    path('home/', views.home, name="home"),
     path('today/', views.today_date, name="today_date"),
     path('random/password', views.randomly_password, name="randomly_password"),
     path('favs/games/', views.favorite_games, name="favorite_games"),
