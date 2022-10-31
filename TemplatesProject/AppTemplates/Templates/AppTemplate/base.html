@@ -1,0 +1,14 @@
+
+
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/today/" class="nav-link active" aria-current="page">Today Page</a></li>
+            <li class="nav-item"><a href="/random/password" class="nav-link">Random Password Page</a></li>
+            <li class="nav-item"><a href="/favs/games/" class="nav-link">Favorite Games Page</a></li>
+            <li class="nav-item"><a href="{% url 'AppTemplate:today'%}" class="nav-link active" aria-current="page">Today Page</a></li>
+            <li class="nav-item"><a href="{% url 'AppTemplate:password'%}" class="nav-link">Random Password Page</a></li>
+            <li class="nav-item"><a href="{% url 'AppTemplate:games'%}" class="nav-link">Favorite Games Page</a></li>
+        </ul>
+    </header>
+</div>
